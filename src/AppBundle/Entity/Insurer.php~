@@ -1,0 +1,62 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Insurer
+ * 
+ * @ORM\Table(name="insurers")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\InsurerRepository")
+ */
+class Insurer
+{
+    
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="title", type="string", length=128)
+     */
+    private $title;
+    
+    /**
+     * @var string
+     * 
+     * @ORM\Column(name="image", type="string", length=128, options={"default" : "no_image.jpg"})
+     */
+    private $image;
+
+    /**
+     * @var Insurer
+     * 
+     * @ORM\ManyToOne(targetEntity="Application\Sonata\UserBundle\Entity\User", inversedBy="insurers")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     */
+    private $user;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="InsurerConfiguration", mappedBy="insurer" , fetch="EAGER", cascade={"persist"})
+     */
+    private $configurations;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="TariffAbstract", mappedBy="insurer" , fetch="EAGER", cascade={"persist"})
+     */
+    private $tariffs;
+    
+    public function __toString()
+    {
+        return $this->getTitle();
+    }
+
+}

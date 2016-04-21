@@ -1,0 +1,25 @@
+{% extends 'AppBundle:partials:layout.html.twig' %}
+
+{% block body %}
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Застраховател</th>
+                <th>Клиент</th>
+                <th>Сума</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for insurancePolicy in insurancePolicies %}
+            <tr>
+                <td>{{ insurancePolicy.insurer.title }}</td>
+                <td>{{ insurancePolicy.client.names }}</td>
+                <td>{{ insurancePolicy.amountTotal ~ ' лв.' }}</td>
+                <td><a href="{{ path('insurance-policies_show', {id : insurancePolicy.id}) }}"
+                       class="btn btn-success">Прегледай</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

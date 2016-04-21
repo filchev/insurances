@@ -1,0 +1,48 @@
+{% extends 'AppBundle:partials:layout.html.twig' %}
+
+{% block body %}
+    <h1>Списък с базови тарифи</h1>
+
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Застраховател</th>
+                <th>Категории</th>
+                <th>Цена</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for baseTariff in baseTariffs %}
+            <tr>
+                <td><a href="{{ path('cms_carenginecapacity_show', { 'id': baseTariff.id }) }}">{{ baseTariff.id }}</a></td>
+                <td>{{ baseTariff.insurer.title }}</td>
+                <td>
+                    <ul>
+                {% for tariffCategory in baseTariff.tariffCategories %}
+                    <li>{{ tariffCategory.category.category }}
+                        <ul>
+                            <li>
+                                {{ tariffCategory.category.title }}
+                            </li>
+                        </ul>
+                    </li>
+                        
+                        
+                {% endfor %}
+                    </ul>
+                </td>
+                <td>{{ baseTariff.amount ~ 'лв.' }}</td>
+                <td>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('cms-base-tariffs_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

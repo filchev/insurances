@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>CarCategoryTariff list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for carCategoryTariff in carCategoryTariffs %}
+            <tr>
+                <td><a href="{{ path('cms_carcategory_show', { 'id': carCategoryTariff.id }) }}">{{ carCategoryTariff.id }}</a></td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('cms_carcategory_show', { 'id': carCategoryTariff.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('cms_carcategory_edit', { 'id': carCategoryTariff.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('cms_carcategory_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

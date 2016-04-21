@@ -1,0 +1,9 @@
+services:
+    insurance_calculator:
+        class:  AppBundle\Utils\InsuranceCalculator\InsuranceCalculator
+        arguments: [ @doctrine.orm.entity_manager ]
+    category_factory:
+        class:  AppBundle\Factory\CategoryFactory
+    currency_utils:
+        class:  AppBundle\Utils\CurrencyUtils\CurrencyUtils
+        arguments: [ @doctrine.orm.entity_manager ]

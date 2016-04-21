@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Client</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ client.id }}</td>
+            </tr>
+            <tr>
+                <th>Names</th>
+                <td>{{ client.names }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ client.email }}</td>
+            </tr>
+            <tr>
+                <th>Mobilephone</th>
+                <td>{{ client.mobilePhone }}</td>
+            </tr>
+            <tr>
+                <th>Dob</th>
+                <td>{% if client.dob %}{{ client.dob|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Addresscity</th>
+                <td>{{ client.addressCity }}</td>
+            </tr>
+            <tr>
+                <th>Addressarea</th>
+                <td>{{ client.addressArea }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('clients_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('clients_edit', { 'id': client.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

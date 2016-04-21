@@ -1,0 +1,41 @@
+{% extends 'AppBundle:partials:layout.html.twig' %}
+
+{% block body %}
+    <h1>CategoryAbstract list</h1>
+
+    <table class="table table-stripped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for categoryAbstract in categoryAbstracts %}
+            <tr>
+                <td><a href="{{ path('cms_categories_show', { 'id': categoryAbstract.id }) }}">{{ categoryAbstract.id }}</a></td>
+                <td>{{ categoryAbstract.title }}</td>
+                <td>{{ categoryAbstract.category }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('cms_categories_show', { 'id': categoryAbstract.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('cms_categories_edit', { 'id': categoryAbstract.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('cms_categories_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

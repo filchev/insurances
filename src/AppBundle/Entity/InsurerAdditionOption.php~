@@ -1,0 +1,157 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * InsurerAdditionOption
+ *
+ * @ORM\Table(name="insurers_additions_options")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\InsurerAdditionOptionRepository")
+ */
+class InsurerAdditionOption
+{
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var int
+     *
+     * @ORM\ManyToOne(targetEntity="InsurerAddition")
+     * @ORM\JoinColumn(name="addition_id", referencedColumnName="id")
+     */
+    private $addition;
+
+    /**
+     * @var int
+     *
+     * @ORM\ManyToOne(targetEntity="AdditionOption")
+     * @ORM\JoinColumn(name="option_id", referencedColumnName="id")
+     */
+    private $additionOption;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="rate", type="decimal", precision=10, scale=2)
+     */
+    private $rate;
+    
+    /**
+     * @var enum
+     *
+     * @ORM\Column(type="string", columnDefinition="ENUM('percent', 'flat')")
+     */
+    private $rate_type;
+
+    
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set addition
+     *
+     * @param integer $addition
+     * @return InsurerAdditionOption
+     */
+    public function setAddition($addition)
+    {
+        $this->addition = $addition;
+
+        return $this;
+    }
+
+    /**
+     * Get addition
+     *
+     * @return integer 
+     */
+    public function getAddition()
+    {
+        return $this->addition;
+    }
+
+    /**
+     * Set additionOption
+     *
+     * @param integer $additionOption
+     * @return InsurerAdditionOption
+     */
+    public function setAdditionOption($additionOption)
+    {
+        $this->additionOption = $additionOption;
+
+        return $this;
+    }
+
+    /**
+     * Get additionOption
+     *
+     * @return integer 
+     */
+    public function getAdditionOption()
+    {
+        return $this->additionOption;
+    }
+
+    /**
+     * Set rate
+     *
+     * @param string $rate
+     * @return InsurerAdditionOption
+     */
+    public function setRate($rate)
+    {
+        $this->rate = $rate;
+
+        return $this;
+    }
+
+    /**
+     * Get rate
+     *
+     * @return string 
+     */
+    public function getRate()
+    {
+        return $this->rate;
+    }
+
+    /**
+     * Set rate_type
+     *
+     * @param string $rateType
+     * @return InsurerAdditionOption
+     */
+    public function setRateType($rateType)
+    {
+        $this->rate_type = $rateType;
+
+        return $this;
+    }
+
+    /**
+     * Get rate_type
+     *
+     * @return string 
+     */
+    public function getRateType()
+    {
+        return $this->rate_type;
+    }
+}

@@ -1,0 +1,187 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * BaseTariff
+ *
+ * @ORM\Table(name="base_tariff")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\BaseTariffRepository")
+ */
+class BaseTariff
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+    
+    /**
+     * @var Insurer
+     * 
+     * @ORM\ManyToOne(targetEntity="Insurer")
+     * @ORM\JoinColumn(name="insurer_id", referencedColumnName="id")
+     */
+    private $insurer;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="amount", type="decimal", precision=10, scale=2)
+     */
+    private $amount;
+    
+    /**
+     * @var carEngineCapacity
+     * 
+     * @ORM\ManyToOne(targetEntity="CarEngineCapacity")
+     * @ORM\JoinColumn(name="tariff_capacity_id", referencedColumnName="id")
+     */
+    private $carEngineCapacity;
+    
+    /**
+     * @var carRegion
+     * 
+     * @ORM\ManyToOne(targetEntity="Region")
+     * @ORM\JoinColumn(name="tariff_region_id", referencedColumnName="id")
+     */
+    private $carRegion;
+    
+    /**
+     * @var driverAge
+     * 
+     * @ORM\ManyToOne(targetEntity="DriverAge")
+     * @ORM\JoinColumn(name="tariff_driver_age_id", referencedColumnName="id")
+     */
+    private $driverAge;
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set insurer
+     *
+     * @param \AppBundle\Entity\Insurer $insurer
+     * @return BaseTariff
+     */
+    public function setInsurer(\AppBundle\Entity\Insurer $insurer = null)
+    {
+        $this->insurer = $insurer;
+
+        return $this;
+    }
+
+    /**
+     * Get insurer
+     *
+     * @return \AppBundle\Entity\Insurer 
+     */
+    public function getInsurer()
+    {
+        return $this->insurer;
+    }
+
+    /**
+     * Set driverAge
+     *
+     * @param \AppBundle\Entity\DriverAgeTariff $driverAge
+     * @return BaseTariff
+     */
+    public function setDriverAge(\AppBundle\Entity\DriverAgeTariff $driverAge = null)
+    {
+        $this->driverAge = $driverAge;
+
+        return $this;
+    }
+
+    /**
+     * Get driverAge
+     *
+     * @return \AppBundle\Entity\DriverAgeTariff 
+     */
+    public function getDriverAge()
+    {
+        return $this->driverAge;
+    }
+
+    /**
+     * Set carEngineCapacity
+     *
+     * @param \AppBundle\Entity\CarEngineCapacityTariff $carEngineCapacity
+     * @return BaseTariff
+     */
+    public function setCarEngineCapacity(\AppBundle\Entity\CarEngineCapacityTariff $carEngineCapacity = null)
+    {
+        $this->carEngineCapacity = $carEngineCapacity;
+
+        return $this;
+    }
+
+    /**
+     * Get carEngineCapacity
+     *
+     * @return \AppBundle\Entity\CarEngineCapacityTariff 
+     */
+    public function getCarEngineCapacity()
+    {
+        return $this->carEngineCapacity;
+    }
+
+    /**
+     * Set carRegion
+     *
+     * @param \AppBundle\Entity\RegionTariff $carRegion
+     * @return BaseTariff
+     */
+    public function setCarRegion(\AppBundle\Entity\RegionTariff $carRegion = null)
+    {
+        $this->carRegion = $carRegion;
+
+        return $this;
+    }
+
+    /**
+     * Get carRegion
+     *
+     * @return \AppBundle\Entity\RegionTariff 
+     */
+    public function getCarRegion()
+    {
+        return $this->carRegion;
+    }
+
+    /**
+     * Set amount
+     *
+     * @param string $amount
+     * @return BaseTariff
+     */
+    public function setAmount($amount)
+    {
+        $this->amount = $amount;
+
+        return $this;
+    }
+
+    /**
+     * Get amount
+     *
+     * @return string 
+     */
+    public function getAmount()
+    {
+        return $this->amount;
+    }
+}

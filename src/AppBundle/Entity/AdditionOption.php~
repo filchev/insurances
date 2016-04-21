@@ -1,0 +1,98 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * AdditionOption
+ *
+ * @ORM\Table(name="additions_options")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\AdditionOptionRepository")
+ */
+class AdditionOption
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var int
+     *
+     * @ORM\ManyToOne(targetEntity="Addition")
+     * @ORM\JoinColumn(name="addition_id", referencedColumnName="id")
+     */
+    private $addition;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="title", type="string", length=255)
+     */
+    private $title;
+
+    public function __toString()
+    {
+        return $this->getTitle();
+    }
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set addition
+     *
+     * @param integer $addition
+     * @return AdditionOption
+     */
+    public function setAddition($addition)
+    {
+        $this->addition = $addition;
+
+        return $this;
+    }
+
+    /**
+     * Get addition
+     *
+     * @return Addition 
+     */
+    public function getAddition()
+    {
+        return $this->addition;
+    }
+
+    /**
+     * Set title
+     *
+     * @param string $title
+     * @return AdditionOption
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    /**
+     * Get title
+     *
+     * @return string 
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+}

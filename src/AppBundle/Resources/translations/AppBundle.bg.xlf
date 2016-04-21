@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="bg" datatype="plaintext" original="AppBundle.en.xlf" >
+        <body>
+            <trans-unit id="label_amount">
+                <source>label_amount</source>
+                <target>Сума</target>
+            </trans-unit>
+            <trans-unit id="label_category">
+                <source>label_category</source>
+                <target>Категория</target>
+            </trans-unit>
+            <trans-unit id="label_insurer">
+                <source>label_insurer</source>
+                <target>Застраховател</target>
+            </trans-unit>
+            <trans-unit id="label_car_info">
+                <source>label_car_info</source>
+                <target>Информация за автомобила</target>
+            </trans-unit>
+            <trans-unit id="label_car_category">
+                <source>label_car_category</source>
+                <target>Категория</target>
+            </trans-unit>
+            <trans-unit id="label_car_region">
+                <source>label_car_region</source>
+                <target>Регион</target>
+            </trans-unit>
+            <trans-unit id="label_car_registration_number">
+                <source>label_car_registration_number</source>
+                <target>Регистрационен номер</target>
+            </trans-unit>
+            <trans-unit id="label_car_engine_capacity">
+                <source>label_car_engine_capacity</source>
+                <target>Кубатура на двигателя</target>
+            </trans-unit>
+            <trans-unit id="label_car_right_direction">
+                <source>label_car_right_direction</source>
+                <target>Дясна дирекция</target>
+            </trans-unit>
+            <trans-unit id="label_driver_info">
+                <source>label_driver_info</source>
+                <target>Информация за собственика</target>
+            </trans-unit>
+            <trans-unit id="label_driver_age">
+                <source>label_driver_age</source>
+                <target>Възраст</target>
+            </trans-unit>
+            <trans-unit id="label_driver_experience">
+                <source>label_driver_experience</source>
+                <target>Опит</target>
+            </trans-unit>
+            <trans-unit id="label_driver_accident">
+                <source>label_driver_accident</source>
+                <target>ПТП през последните 3 години</target>
+            </trans-unit>
+            <trans-unit id="label_client_names">
+                <source>label_client_names</source>
+                <target>Име и фамилия</target>
+            </trans-unit>
+            <trans-unit id="label_client_email">
+                <source>label_client_email</source>
+                <target>е-поща</target>
+            </trans-unit>
+            <trans-unit id="label_client_mobile_phone">
+                <source>label_client_mobile_phone</source>
+                <target>Мобилен телефон</target>
+            </trans-unit>
+            <trans-unit id="label_client_dob">
+                <source>label_client_dob</source>
+                <target>Дата на раждане</target>
+            </trans-unit>
+            <trans-unit id="label_client_address_city">
+                <source>label_client_address_city</source>
+                <target>Град</target>
+            </trans-unit>
+            <trans-unit id="label_client_address_area">
+                <source>label_client_address_area</source>
+                <target>Район</target>
+            </trans-unit>
+            <trans-unit id="label_insurance_policy_documents">
+                <source>label_insurance_policy_documents</source>
+                <target>Документи за прикачване</target>
+            </trans-unit>
+            <trans-unit id="label_base_tariff_new">
+                <source>label_base_tariff_new</source>
+                <target>Нова базова тарифа</target>
+            </trans-unit>
+            <trans-unit id="btn_create">
+                <source>btn_create</source>
+                <target>Създай</target>
+            </trans-unit>
+            <trans-unit id="btn_back_to_list">
+                <source>btn_back_to_list</source>
+                <target>Обратно в списъка</target>
+            </trans-unit>
+            <trans-unit id="btn_insurance_policy_next">
+                <source>btn_insurance_policy_next</source>
+                <target>избери и продължи</target>
+            </trans-unit>
+            <trans-unit id="btn_insurance_policy_create">
+                <source>btn_insurance_policy_create</source>
+                <target>потвърди и поръчай</target>
+            </trans-unit>
+            <trans-unit id="heading_insurance_policy_new">
+                <source>heading_insurance_policy_new</source>
+                <target>Въвеждане на клиентска информация и поръчка на услуга</target>
+            </trans-unit>
+            <trans-unit id="btn_refresh_currencies">
+                <source>btn_refresh_currencies</source>
+                <target>Синхронизирай валутите</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

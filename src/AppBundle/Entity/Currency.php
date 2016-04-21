@@ -1,0 +1,183 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Currency
+ *
+ * @ORM\Table(name="currencies")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\CurrencyRepository")
+ */
+class Currency
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=128)
+     */
+    protected $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="rate", type="decimal", precision=10, scale=6)
+     */
+    protected $rate;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="reverse_rate", type="decimal", precision=10, scale=6)
+     */
+    protected $reverseRate;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="updated_at", type="datetime")
+     */
+    protected $updatedAt;
+
+    /**
+     * @var string
+     *
+     * @ORM\ManyToOne(targetEntity="CurrencyProvider")
+     * @ORM\JoinColumn(name="currency_provider_id", referencedColumnName="id")
+     */
+    protected $provider;
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     * @return Currency
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string 
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set rate
+     *
+     * @param string $rate
+     * @return Currency
+     */
+    public function setRate($rate)
+    {
+        $this->rate = $rate;
+
+        return $this;
+    }
+
+    /**
+     * Get rate
+     *
+     * @return string 
+     */
+    public function getRate()
+    {
+        return $this->rate;
+    }
+
+    /**
+     * Set reverseRate
+     *
+     * @param string $reverseRate
+     * @return Currency
+     */
+    public function setReverseRate($reverseRate)
+    {
+        $this->reverseRate = $reverseRate;
+
+        return $this;
+    }
+
+    /**
+     * Get reverseRate
+     *
+     * @return string 
+     */
+    public function getReverseRate()
+    {
+        return $this->reverseRate;
+    }
+
+    /**
+     * Set updatedAt
+     *
+     * @param \DateTime $updatedAt
+     * @return Currency
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * Get updatedAt
+     *
+     * @return \DateTime 
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * Set provider
+     *
+     * @param \AppBundle\Entity\CurrencyProvider $provider
+     * @return Currency
+     */
+    public function setProvider(\AppBundle\Entity\CurrencyProvider $provider = null)
+    {
+        $this->provider = $provider;
+
+        return $this;
+    }
+
+    /**
+     * Get provider
+     *
+     * @return \AppBundle\Entity\CurrencyProvider 
+     */
+    public function getProvider()
+    {
+        return $this->provider;
+    }
+}

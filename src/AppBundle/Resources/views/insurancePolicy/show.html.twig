@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2>Преглед на Гражданска Отговорност - Клиентска информация</h2>
+    
+    <table class="table table-striped">
+        <tr>
+            <th colspan="2">Застраховател:</th>
+        </tr>
+        <tr>
+            <td>
+                <img src='{{ asset('assets/img/insurers/' ~ insurancePolicy.insurer.image ) }}' 
+                 alt='{{ insurancePolicy.insurer.title }}' />
+            </td>
+            <td class="text-right">{{ insurancePolicy.insurer.title }}</td>
+        </tr>
+        <tr>
+            <th colspan="2">Информация за клиента</th>
+        </tr>
+        <tr>
+            <td>имена</td><td class="text-right">{{ insurancePolicy.client.names }}</td>
+        </tr>
+        <tr>
+            <td>е-поща</td><td class="text-right">{{ insurancePolicy.client.email }}</td>
+        </tr>
+        <tr>
+            <td>рожденна дата</td><td class="text-right">{{ insurancePolicy.client.dob|date("m/d/Y") }}</td>
+        </tr>
+        <tr>
+            <td>моб. телефон</td><td class="text-right">{{ insurancePolicy.client.mobilePhone }}</td>
+        </tr> 
+        <tr>
+            <td>адрес</td><td class="text-right">{{ insurancePolicy.client.addressCity }}</td>
+        </tr>           
+    </table>
+    <table class="table table-striped">
+        <tr>
+            <th colspan="2">Тарифи</th>
+        </tr>
+        {% for insuranceOption in insurancePolicy.insuranceOptions %}
+        <tr>
+            <td>
+                {{ insuranceOption.categoryOption.category }}
+                <strong>{{ insuranceOption.categoryOption.title }}</strong>
+            </td>
+            <td class="text-right"><span class="label {{ (insuranceOption.amount < 0)? 'label-success' : 'label-danger'}}">{{ insuranceOption.amount ~ ' лв.' }}</span></td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td><h4>ТОТАЛ:</h4></td>
+            <td class="text-right"><span class="label label-warning" style="font-size: 15px;">{{ insurancePolicy.amountTotal ~ ' лв.'}}</span></td>
+        </tr>
+        <tr><th colspan="2">Прикачени файлове:</th></tr>
+        {% for file in insurancePolicy.insuranceFiles %}
+        <tr>
+            <td colspan="2">
+                <img src="{{ asset('uploads/documents/' ~ file.filename)}}" 
+                     style="width: 350px; height: auto;"/>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

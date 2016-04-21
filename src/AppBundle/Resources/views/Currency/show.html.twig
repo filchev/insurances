@@ -1,0 +1,44 @@
+{% extends 'AppBundle:partials:layout.html.twig' %}
+
+{% block body %}
+    <h1>Currency</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ currency.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ currency.name }}</td>
+            </tr>
+            <tr>
+                <th>Rate</th>
+                <td>{{ currency.rate }}</td>
+            </tr>
+            <tr>
+                <th>Reverserate</th>
+                <td>{{ currency.reverseRate }}</td>
+            </tr>
+            <tr>
+                <th>Updatedat</th>
+                <td>{% if currency.updatedAt %}{{ currency.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('cms_currencies_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('cms_currencies_edit', { 'id': currency.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>InsurerBaseTariff list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Amount</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for insurerBaseTariff in insurerBaseTariffs %}
+            <tr>
+                <td><a href="{{ path('insurerbasetariff_show', { 'id': insurerBaseTariff.id }) }}">{{ insurerBaseTariff.id }}</a></td>
+                <td>{{ insurerBaseTariff.amount }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('insurerbasetariff_show', { 'id': insurerBaseTariff.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('insurerbasetariff_edit', { 'id': insurerBaseTariff.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('insurerbasetariff_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

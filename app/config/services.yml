@@ -1,0 +1,32 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/book/service_container.html
+parameters:
+#    parameter_name: value
+
+services:
+    admin.insurers:
+        class: AppBundle\Admin\InsurerAdmin
+        arguments: [~, AppBundle\Entity\Insurer, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Застрахователи, group: Insurance }
+    admin.car_categories:
+        class: AppBundle\Admin\CarCategoryAdmin
+        arguments: [~, AppBundle\Entity\CarCategory, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: МПС - категории, group: Insurance }
+    admin.car_engine_capacities:
+        class: AppBundle\Admin\CarEngineCapacityAdmin
+        arguments: [~, AppBundle\Entity\CarEngineCapacity, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: МПС - кубатури, group: Insurance }
+    admin.car_categories:
+        class: AppBundle\Admin\CarCategoryAdmin
+        arguments: [~, AppBundle\Entity\CarCategory, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: МПС - десен волан, group: Insurance }
+    admin.car_engine_capacities:
+        class: AppBundle\Admin\DriverAccidentAdmin
+        arguments: [~, AppBundle\Entity\DriverAccident, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Собственик - произшествия, group: Insurance }
+            

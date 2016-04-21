@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Базова тарифа - създаване на нова</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit" value="Създай" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('cms-base-tariffs_index') }}">Обратно в списъка</a>
+        </li>
+    </ul>
+{% endblock %}

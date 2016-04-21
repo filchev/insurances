@@ -1,0 +1,29 @@
+cms_currencies_index:
+    path:     /
+    defaults: { _controller: "AppBundle:CMS\Currency:index" }
+    methods:  GET
+
+cms_currencies_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:CMS\Currency:show" }
+    methods:  GET
+
+cms_currencies_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:CMS\Currency:new" }
+    methods:  [GET, POST]
+
+cms_currencies_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:CMS\Currency:edit" }
+    methods:  [GET, POST]
+
+cms_currencies_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:CMS\Currency:delete" }
+    methods:  DELETE
+    
+cms_currencies_refresh:
+    path:     /refresh
+    defaults: { _controller: "AppBundle:CMS\Currency:refreshRates" }
+    methods:  GET

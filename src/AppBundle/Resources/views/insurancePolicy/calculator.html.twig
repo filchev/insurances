@@ -1,0 +1,44 @@
+{% extends 'AppBundle:partials:policy_layout.html.twig' %}
+
+{% block body %}
+    <h3>Калкулатор за Гражданска Отговорност</h3>
+    {{ form(contract_form) }}
+    <div ng-controller="CalculatorController">
+        <select
+            ng-model="selectedCurrency"
+            ng-change="updateCurrency(selectedCurrency)"
+            ng-options="currency as currency.name for currency in currencies">
+        </select>
+        {% for calculator in calculators %} 
+        <table class="table {{ (loop.index == 1)? 'alert-success' : ''}}">
+            {% if(loop.index == 1) %}
+                <tr>
+                    <td><h2>НАЙ-ИЗГОДНА ОФЕРТА!!!</h2></td>
+                </tr>
+            {% endif %}
+            <tr>
+                <td><img src="{{ asset('assets/img/insurers/' ~ calculator.insurer.image) }}" alt="Symfony!" /></td>
+            </tr>
+            <tr>
+                <td><h3>{{ calculator.insurer.title }}</h3></td>
+            </tr>
+            <tr>
+                <td>[[ getBaseAmount({{ calculator.amount }}) ]] [[ selectedCurrency.name ]]</td>
+            </tr>
+            <tr>
+                <td>                
+                    <form method="post" action="{{ path('insurance-policies_new') }}">
+                        {% set categories = contract_form.car|merge(contract_form.driver) %}
+                        {% for category in categories if category.vars.name != 'age' %}
+                        <input type='hidden' name='category_options[{{ loop.index -1 }}]' value='{{ category.vars.value }}'/>
+                        {% endfor%}
+                        <input type='hidden' name='driver_age' value='{{ categories['age'].vars.value }}' />
+                        <input type='hidden' name='insurer_id' value='{{ calculator.insurer.id }}' />
+                        <input type='submit' value='{{ 'btn_insurance_policy_create' | trans({},'AppBundle') }}' />
+                    </form>
+                </td>
+            </tr>
+        </table>
+        {% endfor %}
+</div>
+{% endblock %}

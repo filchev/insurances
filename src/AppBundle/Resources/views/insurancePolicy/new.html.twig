@@ -1,0 +1,32 @@
+{% extends 'AppBundle:partials:policy_layout.html.twig' %}
+
+{% block body %}
+    <h2>{{ 'heading_insurance_policy_new' | trans({}, 'AppBundle') }}</h2>
+    
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type='submit' value='{{ 'btn_insurance_policy_create' | trans({}, 'AppBundle') }}' 
+               class="btn btn-success"/>
+    {{ form_end(form) }}
+
+    <div ng-controller="InsurancePolicyNewController">
+        <ul>
+            <li>
+                <img src='{{ asset('assets/img/insurers/' ~ insurer.image ) }}' 
+                     alt='{{ insurer.title }}' />
+                {{ insurer.title }}
+            </li>
+            <li><h3>Базова стойност: [[ getAmountByCurrency({{ baseTariff.amount }}) ]] [[ activeCurrency.name ]]</h3></li>
+            {% for tariff in tariffs %}
+                <ul>
+                    <li><strong>{{ tariff.categoryOption.category}} {{tariff.categoryOption.title}}</strong></li>
+                    <li class='{{ (tariff.isDiscount)? 'alert-success'  : 'alert-danger'}}'>
+                        {{ (tariff.isDiscount)? '-'  : '+'}}[[ getAmountByCurrency({{ tariff.amount }}) ]]
+                        {{ (tariff.isPercent)? '% от базовата стойност'  : '[[ activeCurrency.name ]]'}}
+                    </li>
+                </ul>
+            {% endfor %}
+            <li><h3>общо: [[ getAmountByCurrency({{ totalAmount }}) ]] [[ activeCurrency.name ]]</h3></li>
+        </ul>
+    </div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>CarEngineCapacityTariff</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ carEngineCapacityTariff.id }}</td>
+                <td>{{ carEngineCapacityTariff.categoryOption.title }}</td>
+                <td>{{ carEngineCapacityTariff.amount }}</td>
+                <td>{{ carEngineCapacityTariff.isPercent ? '%' : 'лв.' }}</td>
+                <td>{{ carEngineCapacityTariff.isDiscount? 'отстъпка' : 'надбавка' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('cms_carenginecapacity_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('cms_carenginecapacity_edit', { 'id': carEngineCapacityTariff.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,87 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use AppBundle\Entity\Insurer;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="insurers_tariffs")
+ * @ORM\InheritanceType("SINGLE_TABLE")
+ * @ORM\DiscriminatorColumn(name="category", type="string")
+ * @ORM\DiscriminatorMap({
+ * "carEngineCapacityTariff" = "CarEngineCapacityTariff",
+ * "carCategoryTariff" = "CarCategory",  
+ * "carRegistrationNumberTariff" = "CarRegistrationNumberTariff",
+ * "carRegionTariff" = "CarRegionTariff",
+ * "carRightDirectionTariff" = "CarRightDirectionTariff",
+ * "driverAgeTariff" = "DriverAgeTariff", 
+ * "driverAccidentTariff" = "DriverAccidentTariff", 
+ * "driverExperienceTariff" = "DriverExperienceTariff"
+ * })
+ */
+abstract class TariffAbstract
+{
+    
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="amount", type="decimal", precision=10, scale=2)
+     */
+    private $amount;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="range_min", type="integer")
+     */
+    private $rangeMin;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="range_max", type="integer")
+     */
+    private $rangeMax;
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="is_percent", type="boolean")
+     */
+    private $isPercent;
+
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="is_discount", type="boolean")
+     */
+    private $isDiscount;
+
+    
+    /**
+     * @var Insurer
+     * 
+     * @ORM\ManyToOne(targetEntity="Insurer")
+     * @ORM\JoinColumn(name="insurer_id", referencedColumnName="id")
+     */
+    private $insurer;
+    
+    /**
+     * @var Insurer
+     * 
+     * @ORM\ManyToOne(targetEntity="CategoryAbstract")
+     * @ORM\JoinColumn(name="category_option_id", referencedColumnName="id");
+     */
+    private $categoryOption;
+    
+}

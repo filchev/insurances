@@ -1,0 +1,52 @@
+{% extends 'AppBundle:partials:layout.html.twig' %}
+
+{% block body %}
+    <h1>Currency list</h1>
+    <p style="display:block; width:100%; float: none;">    
+        <a href="{{ path('cms_currencies_refresh') }}"
+            class="btn btn-warning pull-right">
+            {{ 'btn_refresh_currencies' | trans({}, 'AppBundle') }}
+        </a>
+    </p>
+    <table class="table table-stripped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Rate</th>
+                <th>Reverserate</th>
+                <th>Provider</th>
+                <th>Updatedat</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for currency in currencies %}
+            <tr>
+                <td><a href="{{ path('cms_currencies_show', { 'id': currency.id }) }}">{{ currency.id }}</a></td>
+                <td>{{ currency.name }}</td>
+                <td>{{ currency.rate }}</td>
+                <td>{{ currency.reverseRate }}</td>
+                <td>{{ currency.provider.name }}</td>
+                <td>{% if currency.updatedAt %}{{ currency.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('cms_currencies_show', { 'id': currency.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('cms_currencies_edit', { 'id': currency.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('cms_currencies_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

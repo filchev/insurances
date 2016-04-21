@@ -1,0 +1,24 @@
+cms_carenginecapacity_index:
+    path:     /
+    defaults: { _controller: "AppBundle:CMS\CarEngineCapacityTariff:index" }
+    methods:  GET
+
+cms_carenginecapacity_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:CMS\CarEngineCapacityTariff:show" }
+    methods:  GET
+
+cms_carenginecapacity_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:CMS\CarEngineCapacityTariff:new" }
+    methods:  [GET, POST]
+
+cms_carenginecapacity_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:CMS\CarEngineCapacityTariff:edit" }
+    methods:  [GET, POST]
+
+cms_carenginecapacity_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:CMS\CarEngineCapacityTariff:delete" }
+    methods:  DELETE

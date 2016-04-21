@@ -1,0 +1,27 @@
+{% extends 'AppBundle:partials:layout.html.twig' %}
+
+{% block body %}
+    <h1>Създаване на нова тарифа</h1>
+    <div ng-controller="TariffController">
+        <i ng-init="categoryOptions = {{ jsonOptions }}"></i>
+        <i ng-init="categories = {{ jsonCategories }}"></i>
+    {{ form_start(form, {'attr': {'ng-model' : 'form'}}) }}
+        {{ form_widget(form) }}
+        <input type="submit" value="Създай" />
+        <select ng-init="form.selectedCategory = categories[0]"
+                ng-model="form.selectedCategory"
+                ng-options="category as category.category for category in categories"
+                ng-change="filterOptions(form.selectedCategory.category)">          
+        </select>
+        <select ng-model="form.selectedOption"
+                ng-options="categoryOption as categoryOption.title for categoryOption in categoryOptions">     
+        </select>
+            <code>[[ categoryOptions[0] ]]</code>
+    {{ form_end(form) }}
+    <ul>
+        <li>
+            <a href="{{ path('cms-base-tariffs_index') }}">Обратно в списъка</a>
+        </li>
+    </ul>
+    </div>
+{% endblock %}

@@ -1,0 +1,88 @@
+app_insurers:
+    resource: "@AppBundle/Resources/config/routing/insurers.yml"
+    prefix:   /insurers
+    
+app_clients:
+    resource: "@AppBundle/Resources/config/routing/clients.yml"
+    prefix:   /clients
+    
+app_contracts:
+       resource: "@AppBundle/Resources/config/routing/contract.yml"
+       prefix:   /contracts
+   
+admin_area:
+    resource: "@SonataAdminBundle/Resources/config/routing/sonata_admin.xml"
+    prefix: /admin
+    
+sonata_user_routes:
+    resource: "@AppBundle/Resources/config/routing/sonata_user.yml"
+    
+sonata_user:
+    resource: '@SonataUserBundle/Resources/config/routing/admin_security.xml'
+    prefix: /admin
+
+_sonata_admin:
+    resource: .
+    type: sonata_admin
+    prefix: /admin
+    
+app_api_v1:
+    resource: "@AppBundle/Resources/config/routing/api.yml"
+    prefix:   /api
+#==============================================================================
+#                              CMS ROUTES
+#==============================================================================
+# 1. Tariff Routes
+#==============================================================================
+cms_carenginecapacity:
+    resource: "@AppBundle/Resources/config/routing/carenginecapacitytariff.yml"
+    prefix:   /{_locale}/cms/tariffs/carenginecapacity
+    
+cms_carcategory:
+    resource: "@AppBundle/Resources/config/routing/carcategorytariff.yml"
+    prefix:   /{_locale}/cms/tariffs/carcategory
+
+#==============================================================================
+# 2. Menu routes
+#==============================================================================
+cms-dashboard:
+    resource: "@AppBundle/Resources/config/routing/dashboard.yml"
+    prefix: /{_locale}/cms
+    
+cms-base-tariffs:
+    resource: "@AppBundle/Resources/config/routing/basetariff.yml"
+    prefix:   /{_locale}/cms/base-tariffs
+
+cms-basic-tariffs:
+    resource: "@AppBundle/Resources/config/routing/basictariff.yml"
+    prefix:   /{_locale}/cms/basic-tariffs
+    
+cms_categories:
+        resource: "@AppBundle/Resources/config/routing/categoryabstract.yml"
+        prefix:   /{_locale}/cms/categories
+        
+cms_currencies:
+    resource: "@AppBundle/Resources/config/routing/currency.yml"
+    prefix:   /{_locale}/cms/currencies
+
+
+#==============================================================================
+#                              CLIENT ROUTES
+#==============================================================================
+app_index:
+   path:     /
+   defaults: { _controller: "AppBundle:InsurancePolicy:calculator" }
+   methods:  [GET, POST]
+
+app_index_locale:
+   path:     /{_locale}/
+   defaults: { _controller: "AppBundle:InsurancePolicy:calculator" }
+   methods:  [GET, POST]
+
+app_insurance-policies:
+    resource: "@AppBundle/Resources/config/routing/insurancepolicy.yml"
+    prefix:   /{_locale}/insurance-policies
+
+app_basetariffs:
+    resource: "@AppBundle/Resources/config/routing/insurerbasetariff.yml"
+    prefix:   /{_locale}/insurerbasetariff

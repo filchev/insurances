@@ -1,0 +1,39 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * InsurancePolicyFile
+ *
+ * @ORM\Table(name="insurance_policy_files")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\InsurancePolicyFileRepository")
+ */
+class InsurancePolicyFile
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var int
+     *
+     * @ORM\ManyToOne(targetEntity="InsurancePolicy", inversedBy="insuranceFiles")
+     * @ORM\JoinColumn(name="insurance_policy_id", referencedColumnName="id")
+     */
+    private $insurancePolicy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="insurancePolicy", type="string", length=128)
+     */
+    private $filename;
+
+}

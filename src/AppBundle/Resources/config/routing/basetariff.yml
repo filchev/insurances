@@ -1,0 +1,9 @@
+cms-base-tariffs_index:
+    path:     /
+    defaults: { _controller: "AppBundle:CMS\BaseTariff:index" }
+    methods:  GET
+    
+cms-base-tariffs_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:CMS\BaseTariff:new" }
+    methods:  [GET, POST]

@@ -1,0 +1,24 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="{{ path('cms_categories_index', {}) }}">Категории</a></li>
+        <li><a href="{{ path('cms_currencies_index', {}) }}">Валути</a></li>
+        <li><a href="{{ path('cms-base-tariffs_index', {}) }}">Базови Тарифи</a></li>
+        <li><a href="{{ path('cms-basic-tariffs_index', {}) }}">Тарифи</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+          <p class="navbar-text">Hello, {{ app.user.username }}</p>
+        <li>
+            {% if app.user %}
+                <a href="{{ url('sonata_user_admin_security_logout', {}) }}">Logout</a> 
+            {% else %}
+                <a href="{{ path('sonata_user_admin_security_login', {}) }}">Login</a> 
+            {% endif %}
+            
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>

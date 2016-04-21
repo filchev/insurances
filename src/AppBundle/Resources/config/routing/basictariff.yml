@@ -1,0 +1,24 @@
+cms-basic-tariffs_index:
+    path:     /
+    defaults: { _controller: "AppBundle:CMS\BasicTariff:index" }
+    methods:  GET
+    
+cms-basic-tariffs_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:CMS\BasicTariff:new" }
+    methods:  [GET, POST]
+
+cms-basic-tariffs_select-category:
+    path:     /select-category
+    defaults: { _controller: "AppBundle:CMS\BasicTariff:selectCategory" }
+    methods:  [GET, POST]
+    
+cms-basic-tariffs_new_car_engine_capacity:
+    path:     /new/car-engine-capacity
+    defaults: { _controller: "AppBundle:CMS\BasicTariff:newCarEngineCapacity" }
+    methods:  [GET, POST]
+    
+cms-tariff:
+    path: /newtariff
+    defaults: { _controller: "AppBundle:CMS\Tariff:new" }
+    methods: [ GET, POST ]

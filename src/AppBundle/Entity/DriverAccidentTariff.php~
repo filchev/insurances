@@ -1,0 +1,24 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * DriverAccidentTariff
+ *
+ * @ORM\Table(name="drivers_accidents_tariffs")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\DriverAccidentTariffRepository")
+ */
+class DriverAccidentTariff extends BaseTariff
+{
+    
+    /**
+     * @var Insurer
+     * 
+     * @ORM\ManyToOne(targetEntity="DriverAccident")
+     * @ORM\JoinColumn(name="driver_accident_id", referencedColumnName="id")
+     */
+    private $driverAccident;
+
+}

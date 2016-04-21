@@ -1,0 +1,43 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * ContractAdditionOption
+ * 
+ * @ORM\Table(name="contracts_additions_options")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\ContractAdditionOptionRepository")
+ */
+class ContractAdditionOption
+{
+    /**
+     * @var int
+     */
+    private $id;
+
+    /**
+     * @var int
+     *
+     * @ORM\ManyToOne(targetEntity="InsurerAdditionOption")
+     * @ORM\JoinColumn(name="addition_option_id", referencedColumnName="id")
+     */
+    private $additionOption;
+
+    /**
+     * @var int
+     *
+     * @ORM\ManyToOne(targetEntity="Contract")
+     * @ORM\JoinColumn(name="contract_id", referencedColumnName="id")
+     */
+    private $contract;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="rate", type="decimal", precision=10, scale=2)
+     */
+    private $rate;
+
+}

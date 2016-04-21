@@ -1,0 +1,21 @@
+{
+  "name": "web",
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "directory": "web/assets/vendor/",
+  "devDependencies": {
+    "angular": "angularjs#^1.5.3",
+    "jquery": "^2.2.3",
+    "bootstrap": "^3.3.6"
+  }
+}

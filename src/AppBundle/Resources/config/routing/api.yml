@@ -1,0 +1,14 @@
+api_v1_currency_post:
+    path: /currency/active
+    defaults: { _controller: "AppBundle:Api\Currency:post" }
+    methods: [ POST ]
+
+api_v1_currency_get:
+    path: /currency/active
+    defaults: { _controller: "AppBundle:Api\Currency:get" }
+    methods: [ GET ]
+
+api_v1_currency_all:
+    path: /currency
+    defaults: { _controller: "AppBundle:Api\Currency:all" }
+    methods: [ GET ]

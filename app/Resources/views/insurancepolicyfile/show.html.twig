@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>InsurancePolicyFile</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ insurancePolicyFile.id }}</td>
+            </tr>
+            <tr>
+                <th>Filename</th>
+                <td>{{ insurancePolicyFile.filename }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('insurancepolicyfile_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('insurancepolicyfile_edit', { 'id': insurancePolicyFile.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

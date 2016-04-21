@@ -1,0 +1,40 @@
+<?php
+
+namespace AppBundle\Entity;
+use Doctrine\Common\Collections\ArrayCollection; 
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * InsurancePolicy
+ *
+ * @ORM\Table(name="insurers_configurations")
+ * @ORM\Entity()
+ */
+class InsurerConfiguration
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var Insurer
+     *
+     * @ORM\ManyToOne(targetEntity="Insurer")
+     * @ORM\JoinColumn(name="insurer_id", referencedColumnName="id")
+     */
+    private $insurer;
+    
+    /**
+     * @var CategoryAbstract
+     *
+     * @ORM\ManyToOne(targetEntity="CategoryAbstract")
+     * @ORM\JoinColumn(name="category_option_id", referencedColumnName="id")
+     */
+    private $configuration;
+}

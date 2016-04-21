@@ -1,0 +1,18 @@
+{% extends 'AppBundle:partials:layout.html.twig' %}
+
+{% block body %}
+    <h1>{{ 'label_base_tariff_new' | trans({}, 'AppBundle') }}</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit" 
+               value="{{ 'btn_create' | trans({}, 'AppBundle') }}" 
+               class="btn btn-success"/>
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('cms-base-tariffs_index') }}">{{ 'btn_back_to_list' | trans({}, 'AppBundle') }}</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,331 @@
+﻿<?xml version="1.0"?>
+<ROWSET>
+ <ROW>
+  <GOLD>0</GOLD>
+  <NAME_>Валута</NAME_>
+  <CODE>Код</CODE>
+  <RATIO>За единици валута</RATIO>
+  <REVERSERATE>Обратен курс за 1 лев</REVERSERATE>
+  <RATE>Лева (BGN)</RATE>
+  <EXTRAINFO>Тези курсове се основават на чл. 29, ал. 2 от Закона за БНБ и референтните курсове на ЕЦБ за съответния ден и се прилагат за целите на статистическата и счетоводната отчетност.&lt;br /&gt;* От 01.09.2010 г. БНБ преустановява публикуването на обменен курс на ISK към BGN във връзка със спирането от страна на ЕЦБ на обявяването на референтен курс на ISK към EUR. При възобновяване от ЕЦБ на котирането на ISK публикуването на курса ISK към BGN ще бъде подновено.</EXTRAINFO>
+  <CURR_DATE>Date</CURR_DATE>
+  <TITLE>Обменни курсове за 14.04.2016</TITLE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Австралийски долар</NAME_>
+  <CODE>AUD</CODE>
+  <RATIO>1</RATIO>
+  <REVERSERATE>0.746999</REVERSERATE>
+  <RATE>1.33869</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Бразилски реал</NAME_>
+  <CODE>BRL</CODE>
+  <RATIO>10</RATIO>
+  <REVERSERATE>2.024</REVERSERATE>
+  <RATE>4.94071</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Канадски долар</NAME_>
+  <CODE>CAD</CODE>
+  <RATIO>1</RATIO>
+  <REVERSERATE>0.737996</REVERSERATE>
+  <RATE>1.35502</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Швейцарски франк</NAME_>
+  <CODE>CHF</CODE>
+  <RATIO>1</RATIO>
+  <REVERSERATE>0.556183</REVERSERATE>
+  <RATE>1.79797</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Китайски ренминби юан</NAME_>
+  <CODE>CNY</CODE>
+  <RATIO>10</RATIO>
+  <REVERSERATE>3.7309</REVERSERATE>
+  <RATE>2.68032</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Чешка крона</NAME_>
+  <CODE>CZK</CODE>
+  <RATIO>100</RATIO>
+  <REVERSERATE>13.8192</REVERSERATE>
+  <RATE>7.23631</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Датска крона</NAME_>
+  <CODE>DKK</CODE>
+  <RATIO>10</RATIO>
+  <REVERSERATE>3.80478</REVERSERATE>
+  <RATE>2.62827</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Британска лира</NAME_>
+  <CODE>GBP</CODE>
+  <RATIO>1</RATIO>
+  <REVERSERATE>0.406784</REVERSERATE>
+  <RATE>2.45831</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Хонконгски  долар</NAME_>
+  <CODE>HKD</CODE>
+  <RATIO>10</RATIO>
+  <REVERSERATE>4.46271</REVERSERATE>
+  <RATE>2.24079</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Хърватска куна</NAME_>
+  <CODE>HRK</CODE>
+  <RATIO>10</RATIO>
+  <REVERSERATE>3.82558</REVERSERATE>
+  <RATE>2.61398</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Унгарски форинт</NAME_>
+  <CODE>HUF</CODE>
+  <RATIO>1000</RATIO>
+  <REVERSERATE>159.14</REVERSERATE>
+  <RATE>6.28379</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Индонезийска рупия</NAME_>
+  <CODE>IDR</CODE>
+  <RATIO>10000</RATIO>
+  <REVERSERATE>7589.79</REVERSERATE>
+  <RATE>1.31756</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Израелски шекел</NAME_>
+  <CODE>ILS</CODE>
+  <RATIO>10</RATIO>
+  <REVERSERATE>2.18025</REVERSERATE>
+  <RATE>4.58663</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Индийска рупия</NAME_>
+  <CODE>INR</CODE>
+  <RATIO>100</RATIO>
+  <REVERSERATE>38.2778</REVERSERATE>
+  <RATE>2.61248</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Исландска крона *</NAME_>
+  <CODE>ISK</CODE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>1</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Японска йена</NAME_>
+  <CODE>JPY</CODE>
+  <RATIO>100</RATIO>
+  <REVERSERATE>62.935</REVERSERATE>
+  <RATE>1.58894</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Южнокорейски вон</NAME_>
+  <CODE>KRW</CODE>
+  <RATIO>1000</RATIO>
+  <REVERSERATE>663.927</REVERSERATE>
+  <RATE>1.50619</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Мексиканско песо</NAME_>
+  <CODE>MXN</CODE>
+  <RATIO>100</RATIO>
+  <REVERSERATE>10.0548</REVERSERATE>
+  <RATE>9.94549</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Малайзийски рингит</NAME_>
+  <CODE>MYR</CODE>
+  <RATIO>10</RATIO>
+  <REVERSERATE>2.23624</REVERSERATE>
+  <RATE>4.4718</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Норвежка крона</NAME_>
+  <CODE>NOK</CODE>
+  <RATIO>10</RATIO>
+  <REVERSERATE>4.7366</REVERSERATE>
+  <RATE>2.11122</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Новозеландски долар</NAME_>
+  <CODE>NZD</CODE>
+  <RATIO>1</RATIO>
+  <REVERSERATE>0.838265</REVERSERATE>
+  <RATE>1.19294</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Филипинско песо</NAME_>
+  <CODE>PHP</CODE>
+  <RATIO>100</RATIO>
+  <REVERSERATE>26.578</REVERSERATE>
+  <RATE>3.76251</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Полска злота</NAME_>
+  <CODE>PLN</CODE>
+  <RATIO>10</RATIO>
+  <REVERSERATE>2.19815</REVERSERATE>
+  <RATE>4.54929</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Нова румънска лея</NAME_>
+  <CODE>RON</CODE>
+  <RATIO>10</RATIO>
+  <REVERSERATE>2.28691</REVERSERATE>
+  <RATE>4.37272</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Руска рубла</NAME_>
+  <CODE>RUB</CODE>
+  <RATIO>100</RATIO>
+  <REVERSERATE>37.9597</REVERSERATE>
+  <RATE>2.63437</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Шведска крона</NAME_>
+  <CODE>SEK</CODE>
+  <RATIO>10</RATIO>
+  <REVERSERATE>4.68242</REVERSERATE>
+  <RATE>2.13565</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Сингапурски долар</NAME_>
+  <CODE>SGD</CODE>
+  <RATIO>1</RATIO>
+  <REVERSERATE>0.784628</REVERSERATE>
+  <RATE>1.27449</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Тайландски бат</NAME_>
+  <CODE>THB</CODE>
+  <RATIO>100</RATIO>
+  <REVERSERATE>20.1991</REVERSERATE>
+  <RATE>4.95072</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Нова турска лира</NAME_>
+  <CODE>TRY</CODE>
+  <RATIO>10</RATIO>
+  <REVERSERATE>1.64651</REVERSERATE>
+  <RATE>6.07344</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Щатски долар</NAME_>
+  <CODE>USD</CODE>
+  <RATIO>1</RATIO>
+  <REVERSERATE>0.575304</REVERSERATE>
+  <RATE>1.73821</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>1</GOLD>
+  <NAME_>Южноафрикански ранд</NAME_>
+  <CODE>ZAR</CODE>
+  <RATIO>10</RATIO>
+  <REVERSERATE>8.38202</REVERSERATE>
+  <RATE>1.19303</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+ <ROW>
+  <GOLD>2</GOLD>
+  <NAME_>Злато (1 трой унция)</NAME_>
+  <CODE>XAU</CODE>
+  <RATIO>1</RATIO>
+  <RATE>2153.45</RATE>
+  <CURR_DATE>14.04.2016</CURR_DATE>
+  <F_STAR>0</F_STAR>
+ </ROW>
+</ROWSET>

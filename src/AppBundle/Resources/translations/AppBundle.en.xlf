@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="bg" target-language="en" datatype="plaintext" original="AppBundle.bg.xlf" >
+        <body>
+            <trans-unit id="label_amount">
+                <source>label_amount</source>
+                <target>Amount</target>
+            </trans-unit>
+            <trans-unit id="label_category">
+                <source>label_category</source>
+                <target>Category</target>
+            </trans-unit>
+            <trans-unit id="label_insurer">
+                <source>label_insurer</source>
+                <target>Insurer</target>
+            </trans-unit>
+            <trans-unit id="label_car_info">
+                <source>label_car_info</source>
+                <target>Car Information</target>
+            </trans-unit>
+            <trans-unit id="label_car_category">
+                <source>label_car_category</source>
+                <target>Car category</target>
+            </trans-unit>
+            <trans-unit id="label_car_region">
+                <source>label_car_region</source>
+                <target>Car region</target>
+            </trans-unit>
+            <trans-unit id="label_car_registration_number">
+                <source>label_car_registration_number</source>
+                <target>Car registration number</target>
+            </trans-unit>
+            <trans-unit id="label_car_engine_capacity">
+                <source>label_car_engine_capacity</source>
+                <target>Car engine capacity</target>
+            </trans-unit>
+            <trans-unit id="label_car_right_direction">
+                <source>label_car_right_direction</source>
+                <target>Car right direction</target>
+            </trans-unit>
+            <trans-unit id="label_driver_info">
+                <source>label_driver_info</source>
+                <target>Driver Information</target>
+            </trans-unit>
+            <trans-unit id="label_driver_age">
+                <source>label_driver_age</source>
+                <target>Driver age</target>
+            </trans-unit>
+            <trans-unit id="label_driver_experience">
+                <source>label_driver_experience</source>
+                <target>Driver experience</target>
+            </trans-unit>
+            <trans-unit id="label_driver_accident">
+                <source>label_driver_accident</source>
+                <target>Driver accidents in the past 3 years</target>
+            </trans-unit>
+            <trans-unit id="label_client_names">
+                <source>label_client_names</source>
+                <target>Client names</target>
+            </trans-unit>
+            <trans-unit id="label_client_email">
+                <source>label_client_email</source>
+                <target>Client email</target>
+            </trans-unit>
+            <trans-unit id="label_client_mobile_phone">
+                <source>label_client_mobile_phone</source>
+                <target>Client mobile phone</target>
+            </trans-unit>
+            <trans-unit id="label_client_dob">
+                <source>label_client_dob</source>
+                <target>Client date of birth</target>
+            </trans-unit>
+            <trans-unit id="label_client_address_city">
+                <source>label_client_address_city</source>
+                <target>Address - City</target>
+            </trans-unit>
+            <trans-unit id="label_client_address_area">
+                <source>label_client_address_area</source>
+                <target>Address - Area</target>
+            </trans-unit>
+            <trans-unit id="label_insurance_policy_documents">
+                <source>label_insurance_policy_documents</source>
+                <target>Documents for upload</target>
+            </trans-unit>
+            <trans-unit id="label_base_tariff_new">
+                <source>label_base_tariff_new</source>
+                <target>New base tariff</target>
+            </trans-unit>
+            <trans-unit id="btn_create">
+                <source>btn_create</source>
+                <target>Create</target>
+            </trans-unit>
+            <trans-unit id="btn_back_to_list">
+                <source>btn_back_to_list</source>
+                <target>back to list</target>
+            </trans-unit>
+            <trans-unit id="btn_insurance_policy_next">
+                <source>btn_insurance_policy_next</source>
+                <target>select and continue</target>
+            </trans-unit>
+            <trans-unit id="btn_insurance_policy_create">
+                <source>btn_insurance_policy_create</source>
+                <target>Confirm and order</target>
+            </trans-unit>
+            <trans-unit id="heading_insurance_policy_new">
+                <source>heading_insurance_policy_new</source>
+                <target>Input client data and order</target>
+            </trans-unit>
+            <trans-unit id="btn_refresh_currencies">
+                <source>btn_refresh_currencies</source>
+                <target>Refresh currencies</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

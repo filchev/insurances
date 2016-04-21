@@ -1,0 +1,4 @@
+cms-dashboard_index:
+    path:     /
+    defaults: { _controller: "AppBundle:CMS\Dashboard:index" }
+    methods:  GET

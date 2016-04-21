@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>InsurancePolicyFile list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Filename</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for insurancePolicyFile in insurancePolicyFiles %}
+            <tr>
+                <td><a href="{{ path('insurancepolicyfile_show', { 'id': insurancePolicyFile.id }) }}">{{ insurancePolicyFile.id }}</a></td>
+                <td>{{ insurancePolicyFile.filename }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('insurancepolicyfile_show', { 'id': insurancePolicyFile.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('insurancepolicyfile_edit', { 'id': insurancePolicyFile.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('insurancepolicyfile_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

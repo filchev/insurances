@@ -1,0 +1,24 @@
+insurance-policies_index:
+    path:     /
+    defaults: { _controller: "AppBundle:InsurancePolicy:index" }
+    methods:  GET
+
+insurance-policies_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:InsurancePolicy:show" }
+    methods:  GET
+
+insurance-policies_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:InsurancePolicy:new" }
+    methods:  [GET, POST]
+
+insurance-policies_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:InsurancePolicy:edit" }
+    methods:  [GET, POST]
+
+insurance-policies_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:InsurancePolicy:delete" }
+    methods:  DELETE

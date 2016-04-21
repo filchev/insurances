@@ -1,0 +1,161 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * InsurerAddition
+ *
+ * @ORM\Table(name="insurers_additions")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\InsurerAdditionRepository")
+ */
+class InsurerAddition
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var int
+     *
+     * @ORM\ManyToOne(targetEntity="Addition")
+     * @ORM\JoinColumn(name="addition_id", referencedColumnName="id")
+     */
+    private $addition;
+    
+    /**
+     * @var array
+     * 
+     * @ORM\OneToMany(targetEntity="InsurerAdditionOption", mappedBy="addition")
+     */
+    private $additionOptions;
+    
+    /**
+     * @var int
+     *
+     * @ORM\ManyToOne(targetEntity="Insurer", inversedBy="additions")
+     * @ORM\JoinColumn(name="insurer_id", referencedColumnName="id")
+     */
+    private $insurer;
+
+
+    public function __toString()
+    {
+        return $this->getAddition()->getTitle();
+    }
+    
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set addition
+     *
+     * @param integer $addition
+     * @return InsurerAddition
+     */
+    public function setAddition($addition)
+    {
+        $this->addition = $addition;
+
+        return $this;
+    }
+
+    /**
+     * Get addition
+     *
+     * @return integer 
+     */
+    public function getAddition()
+    {
+        return $this->addition;
+    }
+    
+    /**
+     * Set insurer
+     *
+     * @param integer $insurer
+     * @return InsurerAddition
+     */
+    public function setInsurerId($insurer)
+    {
+        $this->insurer = $insurer;
+
+        return $this;
+    }
+
+    /**
+     * Get addition
+     *
+     * @return integer 
+     */
+    public function getInsurer()
+    {
+        return $this->insurer;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->additionOptions = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add additionOptions
+     *
+     * @param \AppBundle\Entity\InsurerAdditionOption $additionOptions
+     * @return InsurerAddition
+     */
+    public function addAdditionOption(\AppBundle\Entity\InsurerAdditionOption $additionOptions)
+    {
+        $this->additionOptions[] = $additionOptions;
+
+        return $this;
+    }
+
+    /**
+     * Remove additionOptions
+     *
+     * @param \AppBundle\Entity\InsurerAdditionOption $additionOptions
+     */
+    public function removeAdditionOption(\AppBundle\Entity\InsurerAdditionOption $additionOptions)
+    {
+        $this->additionOptions->removeElement($additionOptions);
+    }
+
+    /**
+     * Get additionOptions
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getAdditionOptions()
+    {
+        return $this->additionOptions;
+    }
+
+    /**
+     * Set insurer
+     *
+     * @param \AppBundle\Entity\Insurer $insurer
+     * @return InsurerAddition
+     */
+    public function setInsurer(\AppBundle\Entity\Insurer $insurer = null)
+    {
+        $this->insurer = $insurer;
+
+        return $this;
+    }
+}

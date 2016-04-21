@@ -1,0 +1,48 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * InsurancePolicyOption
+ *
+ * @ORM\Table(name="insurance_policies_options")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\InsurancePolicyOptionRepository")
+ */
+class InsurancePolicyOption
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var int
+     *
+     * @ORM\ManyToOne(targetEntity="InsurancePolicy")
+     * @ORM\JoinColumn(name="insurance_policy_id", referencedColumnName="id")
+     */
+    private $insurancePolicy;
+
+    /**
+     * @var int
+     *
+     * @ORM\ManyToOne(targetEntity="CategoryAbstract")
+     * @ORM\JoinColumn(name="category_option_id", referencedColumnName="id")
+     */
+    private $categoryOption;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="amount", type="decimal", precision=10, scale=2)
+     */
+    private $amount;
+    
+
+}

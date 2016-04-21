@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Списък с тарифи за - кубатури на двигатели</h1>
+
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Застраховател</th>
+                <th>Категория</th>
+                <th>Сума</th>
+                <th>Вид</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for carEngineCapacityTariff in carEngineCapacityTariffs %}
+            <tr>
+                <td><a href="{{ path('cms_carenginecapacity_show', { 'id': carEngineCapacityTariff.id }) }}">{{ carEngineCapacityTariff.id }}</a></td>
+                <td>{{ carEngineCapacityTariff.insurer.title }}</td>
+                <td>{{ carEngineCapacityTariff.categoryOption.title }}</td>
+                <td>{{ carEngineCapacityTariff.amount }}</td>
+                <td>{{ carEngineCapacityTariff.isPercent ? '%' : 'лв.' }}</td>
+                <td>{{ carEngineCapacityTariff.isDiscount? 'отстъпка' : 'надбавка' }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('cms_carenginecapacity_show', { 'id': carEngineCapacityTariff.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('cms_carenginecapacity_edit', { 'id': carEngineCapacityTariff.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('cms_carenginecapacity_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

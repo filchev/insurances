@@ -1,0 +1,48 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use AppBundle\Entity\RegistrationNumber;
+use AppBundle\Entity\Region;
+use AppBundle\Entity\CarEngineCapacity;
+
+/**
+ * Car
+ *
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\CarRepository")
+ */
+class Car
+{
+    /**
+     * @var int
+     * 
+     */
+    private $id;
+
+    /**
+     * @var Region $region
+     *
+     */
+    private $region;
+    
+    /**
+     * @var RegistrationNumber
+     * 
+     */
+    private $registrationNumber;
+    
+    /**
+     * @var CarEngineCapacity
+     * 
+     */
+    private $carEngineCapacity;   
+    
+    /**
+     * @var CarCategory
+     * 
+     */
+    private $carCategory;
+    
+    
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="stylesheet"
+              href="{{ asset('assets/vendor/bootstrap/dist/css/bootstrap.min.css') }}" />
+        <link rel="stylesheet"
+              href="{{ asset('assets/css/app.css') }}" />
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body ng-app="app">        
+        {% embed 'AppBundle:partials:navigation.html.twig' %}
+        {% endembed %}
+        <div class="wrapper container container-fluid">
+        {% block body %}{% endblock %}            
+        </div>
+        {% block javascripts %}{% endblock %}
+        <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+        <script src="{{ asset('assets/js/angular.min.js') }}"></script>
+        <script src="{{ asset('assets/js/app.js') }}"></script>
+    </body>
+</html>

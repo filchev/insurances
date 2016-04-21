@@ -1,0 +1,42 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use AppBundle\Entity\CategoryAbstract;
+use AppBundle\Entity\Insurer;
+
+/**
+ * InsurerBaseTariff
+ *
+ * @ORM\Table(name="insurers_base_tariffs_categories")
+ * @ORM\Entity()
+ */
+class InsurerBaseTariffCategory
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+    
+    /**
+     * @var Insurer
+     * 
+     * @ORM\ManyToOne(targetEntity="CategoryAbstract")
+     * @ORM\JoinColumn(name="category_id", referencedColumnName="id")
+     */
+    private $category;
+    
+    /**
+     * @var Insurer
+     * 
+     * @ORM\ManyToOne(targetEntity="InsurerBaseTariff", inversedBy="tariffCategories")
+     * @ORM\JoinColumn(name="base_tariff_id", referencedColumnName="id")
+     */
+    private $baseTariff;
+    
+}
